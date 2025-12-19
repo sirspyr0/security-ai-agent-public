@@ -21,7 +21,7 @@ Autonomous penetration-testing copilot that orchestrates 20+ Kali-grade tools wi
 - Deployment: Works on Kali/Linux, CPU-only; supports air-gapped use with local LLM (Phi-2/Mistral via Ollama) when desired.
 
 ## Pilot Quickstart
-- Request a pilot build (security@sirspyr0.com) and define scope/authorization.
+- Request a pilot build (leondaspaul3@gmail.com) and define scope/authorization.
 - Provision a Kali/Linux host; ensure Python 3.12 and core tooling available (we supply fallbacks for missing binaries).
 - Run the guided pilot against your staging or lab target; review live logs via the UI and the generated report/audit log.
 - Tune timeouts, wordlists, and sequencing; move to production once satisfied.
