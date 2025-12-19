@@ -20,6 +20,16 @@ Autonomous penetration-testing copilot that orchestrates 20+ Kali-grade tools wi
 - Reporting: Vulnerability markdown reports + JSON audit logs per target for compliance and reproducibility.
 - Deployment: Works on Kali/Linux, CPU-only; supports air-gapped use with local LLM (Phi-2/Mistral via Ollama) when desired.
 
+## Pilot Quickstart
+- Request a pilot build (security@sirspyr0.com) and define scope/authorization.
+- Provision a Kali/Linux host; ensure Python 3.12 and core tooling available (we supply fallbacks for missing binaries).
+- Run the guided pilot against your staging or lab target; review live logs via the UI and the generated report/audit log.
+- Tune timeouts, wordlists, and sequencing; move to production once satisfied.
+
+## Sample Outputs
+- Report: reports/sample_vulnerability_report_example.com.md
+- Audit log: logs/sample_audit_example.com.json
+
 ## Engagement Model
 1. **Discovery call:** Confirm scope, targets, and authorization. The agent is for authorized testing only.
 2. **Pilot run:** We provide a guided pilot build; you execute against an agreed target while we monitor outcomes and tune timeouts/tool set.
