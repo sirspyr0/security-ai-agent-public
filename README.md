@@ -26,9 +26,30 @@ Autonomous penetration-testing copilot that orchestrates 20+ Kali-grade tools wi
 - Run the guided pilot against your staging or lab target; review live logs via the UI and the generated report/audit log.
 - Tune timeouts, wordlists, and sequencing; move to production once satisfied.
 
+### Minimal Eval Install (pilot bundle)
+1. Create a fresh Kali/Linux VM; ensure `python3.12-venv` and common build tools (`git`, `curl`, `gcc`) are present.
+2. Install core binaries if allowed: `sudo apt-get update && sudo apt-get install -y nmap nikto hydra feroxbuster wfuzz whatweb amass` (pilot will fall back to Python where missing).
+3. Set up a venv and install pilot deps:
+	```bash
+	python3 -m venv .venv && source .venv/bin/activate
+	pip install -r requirements.txt  # provided with pilot bundle
+	```
+4. Run the pilot:
+	```bash
+	python3 agent.py example.com --verbose
+	# or start the UI
+	FLASK_APP=app.py flask run --host 0.0.0.0 --port 5000
+	```
+5. View reports in `reports/` and audit logs in `logs/` after completion.
+
 ## Sample Outputs
 - Report: reports/sample_vulnerability_report_example.com.md
 - Audit log: logs/sample_audit_example.com.json
+
+## UI Preview
+- See ui/README.md for redaction steps.
+- Once you add `ui/preview.png` (redacted), it will appear here:
+  - ![Redacted UI Preview](ui/preview.png)
 
 ## Engagement Model
 1. **Discovery call:** Confirm scope, targets, and authorization. The agent is for authorized testing only.
