@@ -60,8 +60,7 @@ Autonomous penetration-testing copilot that orchestrates 20+ Kali-grade tools wi
 ## Licensing (Commercial)
 - This public repository is a commercial offering with no rights to use, modify, or distribute the software without a paid license agreement.
 - Evaluation builds are available under a time-limited evaluation addendum.
-- For licensing and pilots, contact: security@sirspyr0.com
-
+- For licensing and pilots, contact: leondaspaul3@gmail.com
 ## Next Steps
 - Request a pilot build and target scope review.
 - Get a sample report and audit log package.
